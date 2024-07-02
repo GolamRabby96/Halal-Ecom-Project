@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Hero } from '../../components/Hero/Hero'
-import { Products } from '../../components/Products/Products'
-import { FeaturesCard } from '../../components/FeaturesCard/FeaturesCard'
+import { ProductsCard } from '../../components/ProductsCard/ProductsCard'
 import { StatisticCard } from '../../components/StatisticCard/StatisticCard'
 import { Footer } from '../../components/Footer/Footer'
+import { Categories } from '../../components/Categories/Categories'
 
 export const Home = () => {
     const [products, SetProducts] = useState([]);
-    console.log(products);
     useEffect(() => {
         const productsApi = async () => {
-            const response = await fetch('https://fakestoreapi.com/products')
+            const response = await fetch('https://fakestoreapi.com/products?limit=8')
             const data = await response.json();
             SetProducts(data);
         }
@@ -25,9 +24,9 @@ export const Home = () => {
                 <h1 className="sm:text-2xl text-2xl font-medium title-font text-gray-900">MOST POPULAR PRODUCTS</h1>
             </div>
             {
-                products.length > 0 ? <Products products={products} /> : <div>Loding ...</div>
+                products.length > 0 ? <ProductsCard products={products} /> : <div>Loding ...</div>
             }
-            <FeaturesCard />
+            <Categories />
             <StatisticCard />
             <Footer />
         </>
