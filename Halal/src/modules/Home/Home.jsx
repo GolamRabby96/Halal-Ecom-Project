@@ -3,7 +3,6 @@ import { Hero } from '../../components/Hero/Hero'
 import { ProductsCard } from '../../components/ProductsCard/ProductsCard'
 import { StatisticCard } from '../../components/StatisticCard/StatisticCard'
 import { Footer } from '../../components/Footer/Footer'
-import { Categories } from '../../components/Categories/Categories'
 
 export const Home = () => {
     const [products, SetProducts] = useState([]);
@@ -26,7 +25,7 @@ export const Home = () => {
             {
                 products.length > 0 ? <ProductsCard products={products} /> : <div>Loding ...</div>
             }
-            <Categories />
+            {/* <Categories /> */}
             <StatisticCard />
             <Footer />
         </>

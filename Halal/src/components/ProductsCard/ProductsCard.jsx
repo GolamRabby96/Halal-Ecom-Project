@@ -14,7 +14,7 @@ export const ProductsCard = ({ products = [] }) => {
                                 return (
                                     <Link to={`product/${id}`} id={id} className="lg:w-1/4 md:w-1/2 w-full p-4 ">
                                         <div className='shadow-md m-2 p-2 h-full hover:shadow-gray-400 cursor-pointer'>
-                                            <Link to={`product/${id}`} className="block relative h-48 rounded overflow-hidden">
+                                            <Link to={`/product/${id}`} className="block relative h-48 rounded overflow-hidden">
                                                 <img alt={title} className="object-cover object-center w-full h-full p-2 sblock" src={image} />
                                             </Link>
                                             <div className="mt-4">

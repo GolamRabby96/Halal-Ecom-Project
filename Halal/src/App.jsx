@@ -9,6 +9,7 @@ import { SingleProduct } from './components/SingleProduct/SingleProduct'
 import { Products } from './components/Products/Products.jsx'
 import { CategoriesProducts } from './components/CategoriesProducts/CategoriesProducts.jsx'
 import { Cart } from './modules/Home/Cart/Cart.jsx'
+import { Contact } from './components/Contact/Contact.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/product/:id" element={<SingleProduct />} />
         <Route exact path="/products/:name" element={<CategoriesProducts />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   )
